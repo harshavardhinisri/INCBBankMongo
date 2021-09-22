@@ -24,8 +24,8 @@ public class EmployeeService implements IEmployeeService {
 	}
 
 	@Override
-	public boolean loginEmployee(Employee employee){
-		return repo.insert(employee)!=null;
+	public Employee verifyacholder(int empId){
+		return repo.loginacholder(empId);
 	}
 
 	@Override
