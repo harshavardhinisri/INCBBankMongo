@@ -11,6 +11,7 @@ public interface IEmployeeService {
 //	public Employee updateEmployee(Employee employee);
 	public String deleteEmployee(int empId);
 	public Employee findByAccID(int accId);
+	public boolean loginEmployee(Employee employee);
 
 	public List<Employee> getEmployeesByName(String name);
 	public List<Employee> getEmployeesBetweenSalary(double minSal, double maxSal); 

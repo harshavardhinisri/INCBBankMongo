@@ -35,6 +35,12 @@ public class EmployeeController {
 		return "Hi " + name;
 	}
 
+	@PostMapping("/login")
+	public boolean loginEmployee(@RequestBody Employee employee)
+	{
+		return service.loginEmployee(employee);
+	}
+
 	@GetMapping("/emp")
 	public List<Employee> getAllEmployees() {
 

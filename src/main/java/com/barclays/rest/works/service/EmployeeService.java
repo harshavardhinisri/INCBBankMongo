@@ -24,6 +24,11 @@ public class EmployeeService implements IEmployeeService {
 	}
 
 	@Override
+	public boolean loginEmployee(Employee employee){
+		return repo.insert(employee)!=null;
+	}
+
+	@Override
 	public Employee findByAccID(int accId){
 		return repo.findById(accId).get();
 	}
