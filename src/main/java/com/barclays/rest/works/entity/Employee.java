@@ -9,14 +9,25 @@ public class Employee {
 	private int empId;
 	private String empName; 
 	private double salary;
+	private Account account;
 	
 	public Employee() {}
 	
-	public Employee(int empId, String empName, double salary) {
+	public Employee(int empId, String empName, double salary, Account account ) {
 		super();
 		this.empId = empId;
 		this.empName = empName;
 		this.salary = salary;
+		this.account = account;
+	}
+
+
+	public Account getAccount() {
+		return account;
+	}
+
+	public void setAccount(Account account) {
+		this.account = account;
 	}
 
 	public int getEmpId() {
@@ -42,9 +53,5 @@ public class Employee {
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
-	 
-	
-	
-	
-	
+
 }

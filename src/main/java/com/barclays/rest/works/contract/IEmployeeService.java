@@ -8,8 +8,9 @@ public interface IEmployeeService {
 	public Employee insertEmployee(Employee employee); 
 	public List<Employee> getAllEmployees();
 	public Employee getEmployeeById(int empId);
-	public Employee updateEmployee(Employee employee); 
+//	public Employee updateEmployee(Employee employee);
 	public String deleteEmployee(int empId);
+	public Employee findByAccID(int accId);
 
 	public List<Employee> getEmployeesByName(String name);
 	public List<Employee> getEmployeesBetweenSalary(double minSal, double maxSal); 

@@ -3,6 +3,8 @@ package com.barclays.rest.works.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
 import com.barclays.rest.works.contract.IEmployeeService;
@@ -17,8 +19,13 @@ public class EmployeeService implements IEmployeeService {
 	
 	@Override
 	public Employee insertEmployee(Employee employee) {
-		
+
 		return repo.save(employee);
+	}
+
+	@Override
+	public Employee findByAccID(int accId){
+		return repo.findById(accId).get();
 	}
 
 	@Override
@@ -33,11 +40,12 @@ public class EmployeeService implements IEmployeeService {
 		return repo.findById(empId).get();
 	}
 
-	@Override
-	public Employee updateEmployee(Employee employee) {
-
-		return null;
-	}
+//	@Override
+//	public Employee updateEmployee(Employee employee) {
+//
+////		return repo.findAll().get();
+//		return null;
+//	}
 
 	@Override
 	public String deleteEmployee(int empId) {
