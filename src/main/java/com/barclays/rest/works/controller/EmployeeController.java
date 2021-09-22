@@ -34,12 +34,12 @@ public class EmployeeController {
 
 		return "Hi " + name;
 	}
-
-	@PostMapping("/login")
-	public Employee verifyacholder (@RequestBody Employee employee)
-	{
-		return service.verifyacholder(employee.empId);
-	}
+//
+//	@PostMapping("/login")
+//	public Employee verifyacholder (@RequestBody Employee employee)
+//	{
+//		return service.verifyacholder();
+//	}
 
 	@GetMapping("/emp")
 	public List<Employee> getAllEmployees() {
