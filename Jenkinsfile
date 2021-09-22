@@ -5,19 +5,19 @@ pipeline{
         
         stage('compile'){
             steps {
-                shell 'mvn clean compile'
+                sh 'mvn clean compile'
             }
         }
         
         stage('unit test'){
             steps {
-               shell 'mvn test'
+               sh 'mvn test'
             }
         }
         
         stage('build'){
             steps {
-                 shell 'mvn -DskipTests package'
+                 sh 'mvn -DskipTests package'
             }
         }
         
