@@ -7,9 +7,7 @@ import javax.annotation.Generated;
 
 @Document(collection = "Employees")
 public class Employee {
-	@Id
-	public int empId;
-
+	
 	private String password;
 	private String email;
 	private String empName;
@@ -24,11 +22,11 @@ public class Employee {
 	
 	public Employee() {}
 	
-	public Employee(int empId, String empName,String password,String pancard,String aadhar,String email,
+	public Employee( String empName,String password,String pancard,String aadhar,String email,
 					String phoneNumber, String DOB, String address ,double salary,
 					Account account,boolean manager ) {
 		super();
-		this.empId = empId;
+	
 		
 		this.password = password;
 		this.empName = empName;
@@ -115,13 +113,7 @@ public class Employee {
 		this.account = account;
 	}
 
-	public int getEmpId() {
-		return empId;
-	}
 
-	public void setEmpId(int empId) {
-		this.empId = empId;
-	}
 
 	public String getEmpName() {
 		return empName;
