@@ -20,6 +20,7 @@ public class Employee {
 	public Employee(int empId, String empName,String password,String pancard,String aadhar,String email, double salary, Account account ) {
 		super();
 		this.empId = empId;
+		
 		this.password = password;
 		this.empName = empName;
 		this.salary = salary;
