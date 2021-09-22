@@ -5,19 +5,19 @@ pipeline{
         
         stage('compile'){
             steps {
-                bat 'mvn clean compile'
+                 'mvn clean compile'
             }
         }
         
         stage('unit test'){
             steps {
-                bat 'mvn test'
+                'mvn test'
             }
         }
         
         stage('build'){
             steps {
-                bat 'mvn -DskipTests package'
+                'mvn -DskipTests package'
             }
         }
         
