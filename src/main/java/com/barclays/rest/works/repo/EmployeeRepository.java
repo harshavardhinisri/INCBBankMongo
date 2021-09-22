@@ -17,5 +17,6 @@ public interface EmployeeRepository extends MongoRepository<Employee, Integer> {
     @Query("{'Employee.account:{'accId':?0}}")
     Optional<Employee> findByAccID(int accId);
 
-
+    @Query("{'empId' :?0}")
+    Employee loginacholder(int empId);
 }

@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "Employees")
 public class Employee {
 	@Id
-	private int empId;
+	public int empId;
 	private String empName; 
 	private double salary;
 	private Account account;

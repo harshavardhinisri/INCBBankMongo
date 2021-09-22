@@ -36,9 +36,9 @@ public class EmployeeController {
 	}
 
 	@PostMapping("/login")
-	public boolean loginEmployee(@RequestBody Employee employee)
+	public Employee verifyacholder (@RequestBody Employee employee)
 	{
-		return service.loginEmployee(employee);
+		return service.verifyacholder(employee.empId);
 	}
 
 	@GetMapping("/emp")
